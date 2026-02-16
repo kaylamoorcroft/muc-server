@@ -17,8 +17,15 @@ def hello_world():
 @app.route('/data', methods=['POST'])
 def receive_data():
     # Get the key sent by the ESP32 from the request headers
-    provided_key = request.headers.get('X-API-Key')
-
+    # provided_key = request.headers.get('X-API-Key')
+    # This automatically looks for the 'Authorization' header
+    auth_header = request.headers.get('Authorization')
+    
+    # We need to remove the "Bearer " part to get just the password
+    provided_key = None
+    if auth_header and auth_header.startswith("Bearer "):
+        provided_key = auth_header.split(" ")[1]
+    
     # 1. Log EVERY header the ESP32 is sending
     print("--- Incoming Headers ---")
     for header, value in request.headers.items():
