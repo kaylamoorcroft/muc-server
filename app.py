@@ -18,6 +18,17 @@ def hello_world():
 def receive_data():
     # Get the key sent by the ESP32 from the request headers
     provided_key = request.headers.get('WRITE_KEY')
+
+    # 1. Log EVERY header the ESP32 is sending
+    print("--- Incoming Headers ---")
+    for header, value in request.headers.items():
+        print(f"{header}: {value}")
+    
+    # 2. Log what the server expects (Careful: this prints your secret to logs!)
+    print(f"EXPECTED SECRET: {WRITE_KEY}")
+    
+    # 3. Try to grab the specific key
+    print(f"PROVIDED KEY: {provided_key}")
     
     if provided_key != WRITE_KEY:
         return {"error": "Unauthorized"}, 401
