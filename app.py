@@ -1,4 +1,8 @@
 from flask import Flask, request, jsonify
+import os
+
+WRITE_KEY = os.environ.get('WRITE_KEY')
+READ_KEY = os.environ.get('READ_KEY')
 
 app = Flask(__name__)
 
@@ -12,6 +16,12 @@ def hello_world():
 # Route to receive POST requests from the ESP32
 @app.route('/data', methods=['POST'])
 def receive_data():
+    # Get the key sent by the ESP32 from the request headers
+    provided_key = request.headers.get('X-API-Key')
+    
+    if provided_key != WRITE_KEY:
+        return {"error": "Unauthorized"}, 401
+    
     content = request.get_json(silent=True)
     if content:
         data_store.append(content) # Save the data
@@ -22,6 +32,12 @@ def receive_data():
 # VIEW data in your browser (GET)
 @app.route('/data', methods=['GET'])
 def show_data():
+    # Looks for 'X-API-Key' in the request headers
+    provided_key = request.headers.get('X-API-Key')
+    
+    if provided_key != READ_KEY:
+        return {"error": "Unauthorized Read"}, 401
+        
     # This returns everything we've collected so far
     return jsonify({
         "count": len(data_store),
