@@ -33,10 +33,10 @@ def receive_data():
 @app.route('/data', methods=['GET'])
 def show_data():
     # Looks for 'X-API-Key' in the request headers
-    provided_key = request.headers.get('X-API-Key')
+    # provided_key = request.headers.get('X-API-Key')
     
-    if provided_key != READ_KEY:
-        return {"error": "Unauthorized Read"}, 401
+    # if provided_key != READ_KEY:
+    #     return {"error": "Unauthorized Read"}, 401
         
     # This returns everything we've collected so far
     return jsonify({
