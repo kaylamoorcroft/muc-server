@@ -17,7 +17,7 @@ def hello_world():
 @app.route('/data', methods=['POST'])
 def receive_data():
     # Get the key sent by the ESP32 from the request headers
-    provided_key = request.headers.get('X-API-Key')
+    provided_key = request.headers.get('WRITE_KEY')
     
     if provided_key != WRITE_KEY:
         return {"error": "Unauthorized"}, 401
@@ -33,7 +33,7 @@ def receive_data():
 @app.route('/data', methods=['GET'])
 def show_data():
     # Looks for 'X-API-Key' in the request headers
-    # provided_key = request.headers.get('X-API-Key')
+    # provided_key = request.headers.get('READ_KEY')
     
     # if provided_key != READ_KEY:
     #     return {"error": "Unauthorized Read"}, 401
