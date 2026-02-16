@@ -17,15 +17,12 @@ def hello_world():
 @app.route('/data', methods=['POST'])
 def receive_data():
     # Get the key sent by the ESP32 from the request headers
-    provided_key = request.headers.get('WRITE_KEY')
+    provided_key = request.headers.get('X-API-Key')
 
     # 1. Log EVERY header the ESP32 is sending
     print("--- Incoming Headers ---")
     for header, value in request.headers.items():
         print(f"{header}: {value}")
-    
-    # 2. Log what the server expects (Careful: this prints your secret to logs!)
-    print(f"EXPECTED SECRET: {WRITE_KEY}")
     
     # 3. Try to grab the specific key
     print(f"PROVIDED KEY: {provided_key}")
@@ -44,7 +41,7 @@ def receive_data():
 @app.route('/data', methods=['GET'])
 def show_data():
     # Looks for 'X-API-Key' in the request headers
-    # provided_key = request.headers.get('READ_KEY')
+    # provided_key = request.headers.get('X-API-Key')
     
     # if provided_key != READ_KEY:
     #     return {"error": "Unauthorized Read"}, 401
