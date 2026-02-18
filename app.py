@@ -61,4 +61,6 @@ def show_data():
 
 if __name__ == '__main__':
     # '0.0.0.0' allows external devices on your network to connect
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    # Use the PORT environment variable if it exists, otherwise default to 8080
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port, debug=TRUE)
