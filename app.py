@@ -15,9 +15,11 @@ if URI:
     if URI.startswith("postgres://"):
         URI = URI.replace("postgres://", "postgresql://", 1)
     app.config['SQLALCHEMY_DATABASE_URI'] = URI
+    print("Using postgres database")
 else:
     # ONLY used for local testing on your own computer
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+    print("Using local SQLite database")
 
 db = SQLAlchemy(app)
 
