@@ -1,12 +1,14 @@
-from flask import Flask, request, redirect, url_for, jsonify
+from flask import Flask, request, jsonify
 import os
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 
 WRITE_KEY = os.environ.get('WRITE_KEY')
 READ_KEY = os.environ.get('READ_KEY')
 URI = os.environ.get("DATABASE_URL") 
 
 app = Flask(__name__)
+CORS(app)  # enables CORS for all routes 
 # Fallback to local SQLite for development
 if URI:
     # Fix Render's 'postgres://' prefix to 'postgresql://'
