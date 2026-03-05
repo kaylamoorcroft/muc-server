@@ -8,7 +8,15 @@ URI = os.environ.get("DATABASE_URL")
 
 app = Flask(__name__)
 # Fallback to local SQLite for development
-app.config['SQLALCHEMY_DATABASE_URI'] = URI or 'sqlite:///site.db'
+if URI:
+    # Fix Render's 'postgres://' prefix to 'postgresql://'
+    if URI.startswith("postgres://"):
+        URI = URI.replace("postgres://", "postgresql://", 1)
+    app.config['SQLALCHEMY_DATABASE_URI'] = URI
+else:
+    # ONLY used for local testing on your own computer
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+
 db = SQLAlchemy(app)
 
 class Data(db.Model):
@@ -25,6 +33,8 @@ class Data(db.Model):
     def __repr__(self):
         return f'<Data {self.time}>'
 
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
 def hello_world():
