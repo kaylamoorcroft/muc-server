@@ -36,6 +36,9 @@ class Data(db.Model):
 
     def __repr__(self):
         return f'<Data {self.time}>'
+    
+def tupleToDict(tuple, field):
+    return {'time': tuple[0], field: tuple[1]}
 
 with app.app_context():
     db.create_all()
@@ -85,6 +88,20 @@ def get_latest():
         return jsonify(record.to_dict())
     
     return jsonify({"message": "No data found"}), 404
+
+# VIEW data in your browser (GET)
+@app.route('/data/<field>', methods=['GET'])
+def getFieldData(field):
+    startDate = request.args.get('startDate', None)
+    if startDate:
+        startDate = startDate.replace(" ", "T")  # Convert to ISO format if needed
+        results = db.session.query(Data.time, Data.temperature).filter(Data.time > startDate).all()
+    else:
+        results = db.session.query(Data.time, Data.temperature).all()
+    for record in results:
+        print(tupleToDict(record, field))  # This will call the __repr__ method of the Data class
+    # Convert each object into a dictionary
+    return jsonify([tupleToDict(record, field) for record in results])
 
 if __name__ == '__main__':
     db.create_all()
