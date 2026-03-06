@@ -95,9 +95,9 @@ def getFieldData(field):
     startDate = request.args.get('startDate', None)
     if startDate:
         startDate = startDate.replace(" ", "T")  # Convert to ISO format if needed
-        results = db.session.query(Data.time, Data.temperature).filter(Data.time > startDate).all()
+        results = db.session.query(Data.time, getattr(Data, field)).filter(Data.time > startDate).all()
     else:
-        results = db.session.query(Data.time, Data.temperature).all()
+        results = db.session.query(Data.time, getattr(Data, field)).all()
     for record in results:
         print(tupleToDict(record, field))  # This will call the __repr__ method of the Data class
     # Convert each object into a dictionary
