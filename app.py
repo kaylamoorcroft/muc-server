@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
+import datetime
 
 WRITE_KEY = os.environ.get('WRITE_KEY')
 READ_KEY = os.environ.get('READ_KEY')
@@ -64,6 +65,11 @@ def receive_data():
         # This unpacks the dictionary keys directly into the model's arguments
         new_entry = Data(**content) 
         
+        # make sure to still send time if time cannot be retrieved on esp32
+        if new_entry.time == "0000-00-00T00:00:00":
+            new_entry.time = str(datetime.datetime.now())
+            print("time created by server:", new_entry.time)
+            
         db.session.add(new_entry)
         db.session.commit()
         print(f"New data added: {content}")
@@ -92,6 +98,8 @@ def get_latest():
 # VIEW data in your browser (GET)
 @app.route('/data/<field>', methods=['GET'])
 def getFieldData(field):
+    if not field: # show all data for blank field
+        return show_data()
     startDate = request.args.get('startDate', None)
     if startDate:
         startDate = startDate.replace(" ", "T")  # Convert to ISO format if needed
