@@ -10,20 +10,25 @@ URI = os.environ.get("DATABASE_URL")
 
 app = Flask(__name__)
 CORS(app)  # enables CORS for all routes 
-# Fallback to local SQLite for development
 if URI:
-    # Fix Render's 'postgres://' prefix to 'postgresql://'
-    if URI.startswith("postgres://"):
-        URI = URI.replace("postgres://", "postgresql://", 1)
-    app.config['SQLALCHEMY_DATABASE_URI'] = URI
-    print("Using postgres database")
+    try:
+        # Fix Render's 'postgres://' prefix to 'postgresql://'
+        if URI.startswith("postgres://"):
+            URI = URI.replace("postgres://", "postgresql://", 1)
+        app.config['SQLALCHEMY_DATABASE_URI'] = URI
+        print("Using postgres database")
+    except:
+        # Fallback to local SQLite for development
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+        print("Using local SQLite database")
 else:
-    # ONLY used for local testing on your own computer
+    # Fallback to local SQLite for development
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
     print("Using local SQLite database")
 
 db = SQLAlchemy(app)
 
+# model that represents Data table in db
 class Data(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     humidity = db.Column(db.Integer)
@@ -37,12 +42,15 @@ class Data(db.Model):
 
     def __repr__(self):
         return f'<Data {self.time}>'
-    
+
+# helper function    
 def tupleToDict(tuple, field):
     return {'time': tuple[0], field: tuple[1]}
 
 with app.app_context():
     db.create_all()
+
+# -- ROUTES --
 
 @app.route('/')
 def hello_world():
@@ -76,16 +84,17 @@ def receive_data():
         return jsonify({"status": "success"}), 200
     return jsonify({"status": "error", "message": "No JSON"}), 400
 
-# VIEW data in your browser (GET)
+# View data in browser (GET)
 @app.route('/data', methods=['GET'])
 def show_data():
     # Fetch all records from the Data table
     all_records = Data.query.all()
     for record in all_records:
-        print(record.to_dict())  # This will call the __repr__ method of the Data class
+        print(record.to_dict()) 
     # Convert each object into a dictionary
     return jsonify([record.to_dict() for record in all_records])
 
+# Only retrieve the most recent record
 @app.route('/data/latest', methods=['GET'])
 def get_latest():
     record = Data.query.order_by(Data.id.desc()).first()
@@ -95,7 +104,7 @@ def get_latest():
     
     return jsonify({"message": "No data found"}), 404
 
-# VIEW data in your browser (GET)
+# View data in browser by field
 @app.route('/data/<field>', methods=['GET'])
 def getFieldData(field):
     if not field: # show all data for blank field
@@ -107,13 +116,13 @@ def getFieldData(field):
     else:
         results = db.session.query(Data.time, getattr(Data, field)).all()
     for record in results:
-        print(tupleToDict(record, field))  # This will call the __repr__ method of the Data class
+        print(tupleToDict(record, field)) 
     # Convert each object into a dictionary
     return jsonify([tupleToDict(record, field) for record in results])
 
 if __name__ == '__main__':
     db.create_all()
-    # '0.0.0.0' allows external devices on your network to connect
+    # '0.0.0.0' allows external devices on network to connect
     # Use the PORT environment variable if it exists, otherwise default to 8080
     port = int(os.environ.get("PORT", 8080))
     app.run(host='0.0.0.0', port=port, debug=True)
