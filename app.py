@@ -6,26 +6,13 @@ import datetime
 
 WRITE_KEY = os.environ.get('WRITE_KEY')
 READ_KEY = os.environ.get('READ_KEY')
-URI = os.environ.get("DATABASE_URL") 
 
 app = Flask(__name__)
 CORS(app)  # enables CORS for all routes 
-if URI:
-    try:
-        # Fix Render's 'postgres://' prefix to 'postgresql://'
-        if URI.startswith("postgres://"):
-            URI = URI.replace("postgres://", "postgresql://", 1)
-        app.config['SQLALCHEMY_DATABASE_URI'] = URI
-        print("Using postgres database")
-    except:
-        # Fallback to local SQLite for development
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-        print("Using local SQLite database")
-else:
-    # Fallback to local SQLite for development
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-    print("Using local SQLite database")
 
+# local SQLite for development
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+print("Using local SQLite database")
 db = SQLAlchemy(app)
 
 # model that represents Data table in db
