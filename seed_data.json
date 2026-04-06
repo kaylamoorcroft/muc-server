@@ -1742,5 +1742,885 @@
     "moisture": 54,
     "temperature": 20.03599,
     "time": "2026-04-06T00:06:22"
+  },
+  {
+    "humidity": 45,
+    "id": 219,
+    "light": 4,
+    "moisture": 54,
+    "temperature": 20.10899,
+    "time": "2026-04-06T00:16:24"
+  },
+  {
+    "humidity": 45,
+    "id": 220,
+    "light": 4,
+    "moisture": 54,
+    "temperature": 19.828,
+    "time": "2026-04-06T00:26:29"
+  },
+  {
+    "humidity": 45,
+    "id": 221,
+    "light": 4,
+    "moisture": 53,
+    "temperature": 19.99,
+    "time": "2026-04-06T00:36:31"
+  },
+  {
+    "humidity": 45,
+    "id": 222,
+    "light": 4,
+    "moisture": 54,
+    "temperature": 19.797,
+    "time": "2026-04-06T00:46:34"
+  },
+  {
+    "humidity": 45,
+    "id": 223,
+    "light": 4,
+    "moisture": 54,
+    "temperature": 19.60099,
+    "time": "2026-04-06T00:56:36"
+  },
+  {
+    "humidity": 45,
+    "id": 224,
+    "light": 4,
+    "moisture": 53,
+    "temperature": 19.72199,
+    "time": "2026-04-06T01:06:38"
+  },
+  {
+    "humidity": 45,
+    "id": 225,
+    "light": 4,
+    "moisture": 54,
+    "temperature": 19.51899,
+    "time": "2026-04-06T01:16:41"
+  },
+  {
+    "humidity": 45,
+    "id": 226,
+    "light": 4,
+    "moisture": 54,
+    "temperature": 19.61399,
+    "time": "2026-04-06T01:26:43"
+  },
+  {
+    "humidity": 45,
+    "id": 227,
+    "light": 4,
+    "moisture": 54,
+    "temperature": 19.58499,
+    "time": "2026-04-06T01:36:46"
+  },
+  {
+    "humidity": 46,
+    "id": 228,
+    "light": 4,
+    "moisture": 54,
+    "temperature": 19.61499,
+    "time": "2026-04-06T01:46:48"
+  },
+  {
+    "humidity": 46,
+    "id": 229,
+    "light": 4,
+    "moisture": 53,
+    "temperature": 19.36799,
+    "time": "2026-04-06T01:56:50"
+  },
+  {
+    "humidity": 46,
+    "id": 230,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.58899,
+    "time": "2026-04-06T02:06:53"
+  },
+  {
+    "humidity": 46,
+    "id": 231,
+    "light": 2,
+    "moisture": 54,
+    "temperature": 19.454,
+    "time": "2026-04-06T02:16:56"
+  },
+  {
+    "humidity": 46,
+    "id": 232,
+    "light": 2,
+    "moisture": 52,
+    "temperature": 19.38101,
+    "time": "2026-04-06T02:26:58"
+  },
+  {
+    "humidity": 46,
+    "id": 233,
+    "light": 2,
+    "moisture": 54,
+    "temperature": 19.31201,
+    "time": "2026-04-06T02:37:01"
+  },
+  {
+    "humidity": 46,
+    "id": 234,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.258,
+    "time": "2026-04-06T02:47:03"
+  },
+  {
+    "humidity": 46,
+    "id": 235,
+    "light": 2,
+    "moisture": 54,
+    "temperature": 19.08599,
+    "time": "2026-04-06T02:57:06"
+  },
+  {
+    "humidity": 46,
+    "id": 236,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.249,
+    "time": "2026-04-06T03:07:08"
+  },
+  {
+    "humidity": 46,
+    "id": 237,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.19899,
+    "time": "2026-04-06T03:17:11"
+  },
+  {
+    "humidity": 46,
+    "id": 238,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.22399,
+    "time": "2026-04-06T03:27:13"
+  },
+  {
+    "humidity": 46,
+    "id": 239,
+    "light": 1,
+    "moisture": 54,
+    "temperature": 19.089,
+    "time": "2026-04-06T03:37:16"
+  },
+  {
+    "humidity": 46,
+    "id": 240,
+    "light": 2,
+    "moisture": 54,
+    "temperature": 19.14001,
+    "time": "2026-04-06T03:47:18"
+  },
+  {
+    "humidity": 46,
+    "id": 241,
+    "light": 1,
+    "moisture": 54,
+    "temperature": 19.28001,
+    "time": "2026-04-06T03:57:21"
+  },
+  {
+    "humidity": 46,
+    "id": 242,
+    "light": 1,
+    "moisture": 53,
+    "temperature": 19.19999,
+    "time": "2026-04-06T04:07:23"
+  },
+  {
+    "humidity": 46,
+    "id": 243,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.278,
+    "time": "2026-04-06T04:17:25"
+  },
+  {
+    "humidity": 46,
+    "id": 244,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.121,
+    "time": "2026-04-06T04:27:28"
+  },
+  {
+    "humidity": 46,
+    "id": 245,
+    "light": 1,
+    "moisture": 53,
+    "temperature": 19.30701,
+    "time": "2026-04-06T04:37:31"
+  },
+  {
+    "humidity": 46,
+    "id": 246,
+    "light": 2,
+    "moisture": 51,
+    "temperature": 19.29701,
+    "time": "2026-04-06T04:47:33"
+  },
+  {
+    "humidity": 46,
+    "id": 247,
+    "light": 1,
+    "moisture": 53,
+    "temperature": 19.001,
+    "time": "2026-04-06T04:57:36"
+  },
+  {
+    "humidity": 46,
+    "id": 248,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.196,
+    "time": "2026-04-06T05:07:38"
+  },
+  {
+    "humidity": 46,
+    "id": 249,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.237,
+    "time": "2026-04-06T05:17:41"
+  },
+  {
+    "humidity": 46,
+    "id": 250,
+    "light": 2,
+    "moisture": 52,
+    "temperature": 19.122,
+    "time": "2026-04-06T05:27:43"
+  },
+  {
+    "humidity": 46,
+    "id": 251,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.272,
+    "time": "2026-04-06T05:37:46"
+  },
+  {
+    "humidity": 46,
+    "id": 252,
+    "light": 1,
+    "moisture": 54,
+    "temperature": 19.258,
+    "time": "2026-04-06T05:47:51"
+  },
+  {
+    "humidity": 46,
+    "id": 253,
+    "light": 1,
+    "moisture": 53,
+    "temperature": 19.24,
+    "time": "2026-04-06T05:57:53"
+  },
+  {
+    "humidity": 46,
+    "id": 254,
+    "light": 2,
+    "moisture": 54,
+    "temperature": 19.22699,
+    "time": "2026-04-06T06:07:56"
+  },
+  {
+    "humidity": 46,
+    "id": 255,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.181,
+    "time": "2026-04-06T06:17:58"
+  },
+  {
+    "humidity": 47,
+    "id": 256,
+    "light": 2,
+    "moisture": 53,
+    "temperature": 19.249,
+    "time": "2026-04-06T06:28:01"
+  },
+  {
+    "humidity": 47,
+    "id": 257,
+    "light": 10,
+    "moisture": 53,
+    "temperature": 19.263,
+    "time": "2026-04-06T06:38:03"
+  },
+  {
+    "humidity": 47,
+    "id": 258,
+    "light": 24,
+    "moisture": 53,
+    "temperature": 19.209,
+    "time": "2026-04-06T06:48:05"
+  },
+  {
+    "humidity": 47,
+    "id": 259,
+    "light": 147,
+    "moisture": 51,
+    "temperature": 19.217,
+    "time": "2026-04-06T06:58:08"
+  },
+  {
+    "humidity": 47,
+    "id": 260,
+    "light": 187,
+    "moisture": 52,
+    "temperature": 19.18499,
+    "time": "2026-04-06T07:08:10"
+  },
+  {
+    "humidity": 47,
+    "id": 261,
+    "light": 312,
+    "moisture": 51,
+    "temperature": 19.116,
+    "time": "2026-04-06T07:18:12"
+  },
+  {
+    "humidity": 47,
+    "id": 262,
+    "light": 535,
+    "moisture": 53,
+    "temperature": 19.297,
+    "time": "2026-04-06T07:28:16"
+  },
+  {
+    "humidity": 47,
+    "id": 263,
+    "light": 705,
+    "moisture": 53,
+    "temperature": 19.28701,
+    "time": "2026-04-06T07:38:18"
+  },
+  {
+    "humidity": 47,
+    "id": 264,
+    "light": 546,
+    "moisture": 53,
+    "temperature": 19.32201,
+    "time": "2026-04-06T07:48:21"
+  },
+  {
+    "humidity": 47,
+    "id": 265,
+    "light": 674,
+    "moisture": 53,
+    "temperature": 19.238,
+    "time": "2026-04-06T07:58:23"
+  },
+  {
+    "humidity": 47,
+    "id": 266,
+    "light": 861,
+    "moisture": 52,
+    "temperature": 19.297,
+    "time": "2026-04-06T08:08:25"
+  },
+  {
+    "humidity": 47,
+    "id": 267,
+    "light": 861,
+    "moisture": 53,
+    "temperature": 19.25601,
+    "time": "2026-04-06T08:18:28"
+  },
+  {
+    "humidity": 47,
+    "id": 268,
+    "light": 860,
+    "moisture": 51,
+    "temperature": 19.31901,
+    "time": "2026-04-06T08:28:31"
+  },
+  {
+    "humidity": 47,
+    "id": 269,
+    "light": 861,
+    "moisture": 53,
+    "temperature": 19.23501,
+    "time": "2026-04-06T08:38:33"
+  },
+  {
+    "humidity": 47,
+    "id": 270,
+    "light": 862,
+    "moisture": 52,
+    "temperature": 19.09,
+    "time": "2026-04-06T08:48:36"
+  },
+  {
+    "humidity": 47,
+    "id": 271,
+    "light": 860,
+    "moisture": 52,
+    "temperature": 19.741,
+    "time": "2026-04-06T08:58:38"
+  },
+  {
+    "humidity": 46,
+    "id": 272,
+    "light": 862,
+    "moisture": 52,
+    "temperature": 20.16899,
+    "time": "2026-04-06T09:08:41"
+  },
+  {
+    "humidity": 46,
+    "id": 273,
+    "light": 862,
+    "moisture": 52,
+    "temperature": 20.45501,
+    "time": "2026-04-06T09:18:45"
+  },
+  {
+    "humidity": 45,
+    "id": 274,
+    "light": 862,
+    "moisture": 52,
+    "temperature": 20.57999,
+    "time": "2026-04-06T09:28:49"
+  },
+  {
+    "humidity": 45,
+    "id": 275,
+    "light": 862,
+    "moisture": 52,
+    "temperature": 21.073,
+    "time": "2026-04-06T09:38:51"
+  },
+  {
+    "humidity": 44,
+    "id": 276,
+    "light": 863,
+    "moisture": 51,
+    "temperature": 21.29801,
+    "time": "2026-04-06T09:48:54"
+  },
+  {
+    "humidity": 44,
+    "id": 277,
+    "light": 862,
+    "moisture": 52,
+    "temperature": 21.18201,
+    "time": "2026-04-06T09:58:56"
+  },
+  {
+    "humidity": 43,
+    "id": 278,
+    "light": 862,
+    "moisture": 52,
+    "temperature": 21.18401,
+    "time": "2026-04-06T10:08:58"
+  },
+  {
+    "humidity": 43,
+    "id": 279,
+    "light": 864,
+    "moisture": 52,
+    "temperature": 21.503,
+    "time": "2026-04-06T10:19:01"
+  },
+  {
+    "humidity": 43,
+    "id": 280,
+    "light": 863,
+    "moisture": 52,
+    "temperature": 21.66899,
+    "time": "2026-04-06T10:29:04"
+  },
+  {
+    "humidity": 43,
+    "id": 281,
+    "light": 862,
+    "moisture": 52,
+    "temperature": 21.99901,
+    "time": "2026-04-06T10:39:06"
+  },
+  {
+    "humidity": 42,
+    "id": 282,
+    "light": 863,
+    "moisture": 50,
+    "temperature": 22.60599,
+    "time": "2026-04-06T10:49:08"
+  },
+  {
+    "humidity": 41,
+    "id": 283,
+    "light": 863,
+    "moisture": 52,
+    "temperature": 23.09399,
+    "time": "2026-04-06T10:59:11"
+  },
+  {
+    "humidity": 41,
+    "id": 284,
+    "light": 865,
+    "moisture": 51,
+    "temperature": 23.453,
+    "time": "2026-04-06T11:09:13"
+  },
+  {
+    "humidity": 40,
+    "id": 285,
+    "light": 865,
+    "moisture": 51,
+    "temperature": 23.602,
+    "time": "2026-04-06T11:19:15"
+  },
+  {
+    "humidity": 39,
+    "id": 286,
+    "light": 865,
+    "moisture": 51,
+    "temperature": 23.68599,
+    "time": "2026-04-06T11:29:17"
+  },
+  {
+    "humidity": 39,
+    "id": 287,
+    "light": 863,
+    "moisture": 51,
+    "temperature": 24.34699,
+    "time": "2026-04-06T11:39:19"
+  },
+  {
+    "humidity": 39,
+    "id": 288,
+    "light": 863,
+    "moisture": 50,
+    "temperature": 24.67299,
+    "time": "2026-04-06T11:49:21"
+  },
+  {
+    "humidity": 39,
+    "id": 289,
+    "light": 863,
+    "moisture": 50,
+    "temperature": 24.804,
+    "time": "2026-04-06T11:59:23"
+  },
+  {
+    "humidity": 39,
+    "id": 290,
+    "light": 863,
+    "moisture": 50,
+    "temperature": 24.602,
+    "time": "2026-04-06T12:09:25"
+  },
+  {
+    "humidity": 39,
+    "id": 291,
+    "light": 863,
+    "moisture": 48,
+    "temperature": 29.544,
+    "time": "2026-04-06T12:19:27"
+  },
+  {
+    "humidity": 37,
+    "id": 292,
+    "light": 864,
+    "moisture": 48,
+    "temperature": 29.09801,
+    "time": "2026-04-06T12:29:30"
+  },
+  {
+    "humidity": 34,
+    "id": 293,
+    "light": 866,
+    "moisture": 50,
+    "temperature": 27.141,
+    "time": "2026-04-06T12:39:32"
+  },
+  {
+    "humidity": 35,
+    "id": 294,
+    "light": 866,
+    "moisture": 49,
+    "temperature": 27.839,
+    "time": "2026-04-06T12:49:34"
+  },
+  {
+    "humidity": 32,
+    "id": 295,
+    "light": 864,
+    "moisture": 2,
+    "temperature": 27.49501,
+    "time": "2026-04-06T12:59:37"
+  },
+  {
+    "humidity": 34,
+    "id": 296,
+    "light": 866,
+    "moisture": 20,
+    "temperature": 28.143,
+    "time": "2026-04-06T13:09:39"
+  },
+  {
+    "humidity": 35,
+    "id": 297,
+    "light": 863,
+    "moisture": 19,
+    "temperature": 29.623,
+    "time": "2026-04-06T13:19:41"
+  },
+  {
+    "humidity": 32,
+    "id": 298,
+    "light": 866,
+    "moisture": 20,
+    "temperature": 28.155,
+    "time": "2026-04-06T13:29:44"
+  },
+  {
+    "humidity": 36,
+    "id": 299,
+    "light": 864,
+    "moisture": 19,
+    "temperature": 29.606,
+    "time": "2026-04-06T13:39:47"
+  },
+  {
+    "humidity": 34,
+    "id": 300,
+    "light": 863,
+    "moisture": 20,
+    "temperature": 27.419,
+    "time": "2026-04-06T13:49:49"
+  },
+  {
+    "humidity": 37,
+    "id": 301,
+    "light": 862,
+    "moisture": 21,
+    "temperature": 26.033,
+    "time": "2026-04-06T13:59:51"
+  },
+  {
+    "humidity": 38,
+    "id": 302,
+    "light": 864,
+    "moisture": 19,
+    "temperature": 28.462,
+    "time": "2026-04-06T14:09:53"
+  },
+  {
+    "humidity": 36,
+    "id": 303,
+    "light": 864,
+    "moisture": 19,
+    "temperature": 29.835,
+    "time": "2026-04-06T14:19:56"
+  },
+  {
+    "humidity": 37,
+    "id": 304,
+    "light": 866,
+    "moisture": 19,
+    "temperature": 30.30499,
+    "time": "2026-04-06T14:29:58"
+  },
+  {
+    "humidity": 35,
+    "id": 305,
+    "light": 863,
+    "moisture": 19,
+    "temperature": 29.76401,
+    "time": "2026-04-06T14:40:00"
+  },
+  {
+    "humidity": 36,
+    "id": 306,
+    "light": 863,
+    "moisture": 19,
+    "temperature": 29.693,
+    "time": "2026-04-06T14:50:03"
+  },
+  {
+    "humidity": 35,
+    "id": 307,
+    "light": 864,
+    "moisture": 19,
+    "temperature": 30.96399,
+    "time": "2026-04-06T15:00:05"
+  },
+  {
+    "humidity": 33,
+    "id": 308,
+    "light": 863,
+    "moisture": 19,
+    "temperature": 29.11,
+    "time": "2026-04-06T15:10:08"
+  },
+  {
+    "humidity": 36,
+    "id": 309,
+    "light": 863,
+    "moisture": 19,
+    "temperature": 30.919,
+    "time": "2026-04-06T15:20:10"
+  },
+  {
+    "humidity": 34,
+    "id": 310,
+    "light": 863,
+    "moisture": 19,
+    "temperature": 29.70401,
+    "time": "2026-04-06T15:30:13"
+  },
+  {
+    "humidity": 34,
+    "id": 311,
+    "light": 863,
+    "moisture": 20,
+    "temperature": 28.23299,
+    "time": "2026-04-06T15:40:15"
+  },
+  {
+    "humidity": 34,
+    "id": 312,
+    "light": 863,
+    "moisture": 20,
+    "temperature": 27.54499,
+    "time": "2026-04-06T15:50:18"
+  },
+  {
+    "humidity": 36,
+    "id": 313,
+    "light": 865,
+    "moisture": 20,
+    "temperature": 26.669,
+    "time": "2026-04-06T16:00:20"
+  },
+  {
+    "humidity": 38,
+    "id": 314,
+    "light": 862,
+    "moisture": 21,
+    "temperature": 25.956,
+    "time": "2026-04-06T16:10:22"
+  },
+  {
+    "humidity": 38,
+    "id": 315,
+    "light": 862,
+    "moisture": 22,
+    "temperature": 24.993,
+    "time": "2026-04-06T16:20:24"
+  },
+  {
+    "humidity": 39,
+    "id": 316,
+    "light": 862,
+    "moisture": 22,
+    "temperature": 23.905,
+    "time": "2026-04-06T16:30:26"
+  },
+  {
+    "humidity": 40,
+    "id": 317,
+    "light": 863,
+    "moisture": 22,
+    "temperature": 23.56699,
+    "time": "2026-04-06T16:40:28"
+  },
+  {
+    "humidity": 40,
+    "id": 318,
+    "light": 862,
+    "moisture": 23,
+    "temperature": 23.245,
+    "time": "2026-04-06T16:50:30"
+  },
+  {
+    "humidity": 41,
+    "id": 319,
+    "light": 861,
+    "moisture": 23,
+    "temperature": 22.55799,
+    "time": "2026-04-06T17:00:32"
+  },
+  {
+    "humidity": 42,
+    "id": 320,
+    "light": 863,
+    "moisture": 22,
+    "temperature": 22.378,
+    "time": "2026-04-06T17:10:35"
+  },
+  {
+    "humidity": 42,
+    "id": 321,
+    "light": 864,
+    "moisture": 23,
+    "temperature": 22.455,
+    "time": "2026-04-06T17:20:37"
+  },
+  {
+    "humidity": 41,
+    "id": 322,
+    "light": 862,
+    "moisture": 23,
+    "temperature": 22.18499,
+    "time": "2026-04-06T17:30:40"
+  },
+  {
+    "humidity": 42,
+    "id": 323,
+    "light": 862,
+    "moisture": 23,
+    "temperature": 21.94801,
+    "time": "2026-04-06T17:40:42"
+  },
+  {
+    "humidity": 42,
+    "id": 324,
+    "light": 860,
+    "moisture": 24,
+    "temperature": 21.47399,
+    "time": "2026-04-06T17:50:44"
+  },
+  {
+    "humidity": 42,
+    "id": 325,
+    "light": 861,
+    "moisture": 23,
+    "temperature": 21.37701,
+    "time": "2026-04-06T18:00:47"
+  },
+  {
+    "humidity": 42,
+    "id": 326,
+    "light": 861,
+    "moisture": 24,
+    "temperature": 21.226,
+    "time": "2026-04-06T18:10:50"
+  },
+  {
+    "humidity": 42,
+    "id": 327,
+    "light": 862,
+    "moisture": 23,
+    "temperature": 21.124,
+    "time": "2026-04-06T18:20:52"
+  },
+  {
+    "humidity": 42,
+    "id": 328,
+    "light": 861,
+    "moisture": 24,
+    "temperature": 21.013,
+    "time": "2026-04-06T18:30:55"
   }
 ]

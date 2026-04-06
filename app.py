@@ -70,6 +70,7 @@ def seed_database():
 
 with app.app_context():
     db.create_all()  # Create table if it doesn't exist
+    print('Loading data from file. Please wait...')
     seed_database()  # Re-fill data if empty
 
 # -- ROUTES --
@@ -115,7 +116,6 @@ def receive_data():
         if new_entry.light < 230: alerts.append("Too Dark")
 
         if alerts:
-            #message_body = " & ".join(alerts)
             message = messaging.Message(
                 notification=messaging.Notification(
                     title="Plant Alert!",
@@ -131,10 +131,21 @@ def receive_data():
 # View data in browser (GET)
 @app.route('/data', methods=['GET'])
 def show_data():
+    startDate = request.args.get('startDate', None)
+    endDate = request.args.get('endDate', None)
     # Fetch all records from the Data table
-    all_records = Data.query.all()
+    results = Data.query
+    # filter if start / end dates provided
+    if startDate:
+        startDate = startDate.replace(" ", "T")  # Convert to ISO format if needed
+        results = results.filter(Data.time > startDate)
+    if endDate:
+        endDate = endDate.replace(" ", "T")  # Convert to ISO format if needed
+        results = results.filter(Data.time < endDate)
+    
+    results = results.all()
     # Convert each object into a dictionary
-    return jsonify([record.to_dict() for record in all_records])
+    return jsonify([record.to_dict() for record in results])
 
 # Only retrieve the most recent record
 @app.route('/data/latest', methods=['GET'])
@@ -157,10 +168,24 @@ def getFieldData(field):
         results = db.session.query(Data.time, getattr(Data, field)).filter(Data.time > startDate).all()
     else:
         results = db.session.query(Data.time, getattr(Data, field)).all()
-    # for record in results:
-    #     print(tupleToDict(record, field)) 
     # Convert each object into a dictionary
     return jsonify([tupleToDict(record, field) for record in results])
+
+# for testing notification functionality
+@app.route('/test-notification')
+def test_notification():
+    try:
+        message = messaging.Message(
+            notification=messaging.Notification(
+                title="TEST ALERT 🚨",
+                body="Test notification from Flask server",
+            ),
+            topic="plant_alerts"
+        )
+        response = messaging.send(message)
+        return f"Successfully sent test message: {response}", 200
+    except Exception as e:
+        return f"Error sending message: {str(e)}", 500
 
 if __name__ == '__main__':
     # '0.0.0.0' allows external devices on network to connect
